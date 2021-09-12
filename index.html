@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+
+    <!----------- alert ---------->
+    <!-- <h2>Выучить</h2>
+    <ol>
+        <li>HTML</li>
+        <li>SCC</li>
+        <li>Java script</li>
+        <li>English</li>
+    </ol>
+    <script>
+        window.alert("HTML");
+        window.alert("SCC");
+        window.alert("Java script");
+        window.alert("English");
+    </script> -->
+    <!---------------------------->
+
+    <!----------- var ---------->
+    <!-- <script>
+        var wordCat;
+        wordCat = "Cat";
+
+        var translateOfWordCat;
+        translateOfWordCat = "Кот";
+
+        window.alert(wordCat);
+        window.alert(translateOfWordCat);
+    </script> -->
+    <!---------------------------->
+
+    <!----------- document.getElementById ---------->
+    <!-- <input value="hello" class="input" id="hello-massege">
+
+    <script>
+        var helloMassageElement;
+        var helloMassageId;
+
+        helloMassageId = "hello-massege";
+        helloMassageElement = document.getElementById(helloMassageId);
+
+        window.alert(helloMassageElement.value);
+        window.alert(helloMassageElement.id);
+        window.alert(helloMassageElement.className); //class = className
+    </script> -->
+
+    <!-- <input value="Nemanskay 12-28" class="address" id="myaddres"/>
+    <script>
+        var addresElement;
+        var addresId;
+        
+        addresId = "myaddres";
+        addresElement = document.getElementById(addresId);
+
+        window.alert(addresElement.value);
+        window.alert(addresElement.id);
+        window.alert(addresElement.className);
+    </script> -->
+    <!---------------------------->
+
+    <!----------- ДЗ ---------->
+    <!-- 1 -->
+    <!-- <select id="cities">
+        <option>Minsk</option>
+        <option selected="selected">Kiev</option>
+        <option>Moscow</option>
+    </select>
+
+    <script>
+        var citiesEl;
+        var citiesId;
+
+        citiesId = "cities";
+        citiesEl = document.getElementById(citiesId);
+
+        window.alert(citiesEl.value); //вызовится, то что выбрано (selected)
+        window.alert(citiesEl.innerHTML); // innerHTML-это содержимое тэга
+    </script> -->
+
+
+    <!-- 2 -->
+    <!-- <textarea  id="hobbies">HTML, JS, CSS</textarea>
+    <script>
+        var textareaId = "hobbies";
+        var textareaEl = document.getElementById(textareaId);
+
+        window.alert(textareaEl.value);//вызовится, то что в нутри тэга
+        window.alert(textareaEl.innerHTML); // innerHTML-это содержимое тэга
+    </script> -->
+
+    <!-- 3 -->
+    <div id="image">
+        <img id="unsplash" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxNnx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="picture">
+    </div>
+    <script>
+        var imageId = "image";
+        var imageEl = document.getElementById(imageId);
+
+        var unsplashId = "unsplash";
+        var unsplashEl = document.getElementById(unsplashId);
+
+        // window.alert(imageEl.value); //у div нет value, т.к. div-это обертка-контейнер
+        window.alert(imageEl.innerHTML); // innerHTML-это содержимое тэга
+
+        window.alert(unsplashEl.src);
+        window.alert(unsplashEl.alt);
+    </script>
+
+    
+
+    <!---------------------------->
+
+
+
+
+
+
+    <!-- <script src="index.js"></script>     -->
+</body>
+
+</html>
