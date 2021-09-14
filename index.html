@@ -99,7 +99,7 @@
     </script> -->
 
     <!-- 3 -->
-    <div id="image">
+    <!-- <div id="image">
         <img id="unsplash" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxNnx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="picture">
     </div>
     <script>
@@ -114,14 +114,86 @@
 
         window.alert(unsplashEl.src);
         window.alert(unsplashEl.alt);
-    </script>
-
-    
-
+    </script> -->
     <!---------------------------->
 
 
+    <!----------- ИПереопределение стилей при помощи JS ---------->
+    <!-- 1 -->
+    <!-- <input value="Dmitry" class="input default-input" id="first-name">
 
+    <script>
+        var firstNameId = "first-name";
+        var firstNameEl = document.getElementById(firstNameId);
+
+        firstNameEl.value = "Andrey";
+        // firstNameEl.className = "input-error"; //заменили полностью класс  
+        firstNameEl.className = "default-input input-error"; //добавили класс к имеющимся 
+
+        window.alert(firstNameEl.className);
+    </script>
+
+    <style>
+        .default-input {
+            border: 1px solid green;
+            padding: 10px;
+        }
+        .input-error {
+            border: 2px solid red;
+        }
+    </style> -->
+
+
+    <!-- 2 -->
+    <div id="avatar-wrapper">
+        <img id="avatar" src="https://images.unsplash.com/photo-1631541911321-e41edca5fea3?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" 
+            alt="аватар">      
+    </div>
+    <script>
+        // var avatarID = "avatar";
+        // var avatarEl = document.getElementById(avatarID);
+
+        // avatarEl.src = "https://images.unsplash.com/photo-1631510083755-11ecb5172d81?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNnx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60";
+        // avatarEl.title = "I'm avatar"; // при навнедении мыши на картинку появляется title
+
+        var avatarWrapperId = "avatar-wrapper";
+        var avaterWrapperEl = document.getElementById(avatarWrapperId);
+
+        // avaterWrapperEl.innerHTML = "abracadabra"; //изменили разметку HTML
+        avaterWrapperEl.innerHTML = "<ul id=\"list\"><li>1</li><li>2</li></ul>"; //поменяли разметку и id, можно посмотреть в кансоле разметку
+        var namberListId = "list";
+        var namberListEl = document.getElementById(namberListId); //присвоили новый id
+        window.alert(namberListEl.id);
+        window.alert(namberListEl.innerHTML);
+
+        // window.alert(avatarEl.title);
+    </script>
+
+    <!-- 3 -->
+    <!-- <select id="cities">
+        <option>Kiev</option>
+        <option>Minsk</option>
+        <option selected="selected">Moscow</option>
+    </select>
+
+    <script>
+        var citiesId = "cities";
+        var citiesEl = document.getElementById(citiesId);
+
+        citiesEl.value = "Kiev" //меняем значение (selected)
+    </script> -->
+
+
+    <!-- 4 -->
+    <!-- <textarea  id="hobbies">HTML, JS, CSS</textarea>
+    <script>
+        var textareaId = "hobbies";
+        var textareaEl = document.getElementById(textareaId);
+
+        textareaEl.value = "I don't have interests" //меня ем значение innerHTML
+    </script> -->
+
+    <!---------------------------->
 
 
 
