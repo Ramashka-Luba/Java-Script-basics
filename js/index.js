@@ -140,45 +140,108 @@
 
 
 // 1 // первая запись, упращаем второй записью
+// var lastNameId = "last-name";
+// var lastNameEl = document.getElementById(lastNameId);
+// console.log(lastNameEl.value); 
+// console.log(lastNameEl.className);
+
+// // 2 // вторая запись, упращаем третей записью
+// function alertLastNameValues() {
+//     console.log(lastNameEl.value);
+//     console.log(lastNameEl.className);
+// }
+
+// var lastNameId = "last-name";
+// var lastNameEl = document.getElementById(lastNameId);
+
+// alertLastNameValues();
+
+// // 3 // третья запись, создаем функцию для всего докуметка, вызывает ее ниже переменной и передаем туда нужную переменную
+
+// function alertValues(elementParametr) { //универсальная функция для всего документа
+//     console.log(elementParametr.value);
+//     console.log(elementParametr.className);
+// }
+
+// var lastNameId = "last-name";
+// var lastNameEl = document.getElementById(lastNameId);
+// alertValues(lastNameEl); // выззываем универсальную функцию
+
+// var myOldId = "my-old";
+// var myOldEl = document.getElementById(myOldId);
+// alertValues(myOldEl);
+
+// var citiesId = "cities";
+// var citiesEl = document.getElementById(citiesId);
+// alertValues(citiesEl);
+
+// var learnListId = "learn";
+// var learnListEl = document.getElementById(learnListId);
+// alertValues(learnListEl);
+
+// var avatarId = "avatar";
+// var avatarEl = document.getElementById(avatarId);
+// alertValues(avatarEl);
+
+
+//////////// // lesson 13 возвращаемые значения (HTML из lessons11, два первых инпута) // ////////////
+
+// 1 // 
 var lastNameId = "last-name";
 var lastNameEl = document.getElementById(lastNameId);
-console.log(lastNameEl.value); 
-console.log(lastNameEl.className);
-
-// 2 // вторая запись, упращаем третей записью
-function alertLastNameValues() {
-    console.log(lastNameEl.value);
-    console.log(lastNameEl.className);
-}
-
-var lastNameId = "last-name";
-var lastNameEl = document.getElementById(lastNameId);
-
-alertLastNameValues();
-
-// 3 // третья запись, создаем функцию для всего докуметка, вызывает ее ниже переменной и передаем туда нужную переменную
-
-function alertValues(elementParametr) { //универсальная функция для всего документа
-    console.log(elementParametr.value);
-    console.log(elementParametr.className);
-}
-
-var lastNameId = "last-name";
-var lastNameEl = document.getElementById(lastNameId);
-alertValues(lastNameEl); // выззываем универсальную функцию
+console.log(lastNameEl.value);
 
 var myOldId = "my-old";
 var myOldEl = document.getElementById(myOldId);
-alertValues(myOldEl);
+console.log(myOldEl.value);
 
-var citiesId = "cities";
-var citiesEl = document.getElementById(citiesId);
-alertValues(citiesEl);
 
-var learnListId = "learn";
-var learnListEl = document.getElementById(learnListId);
-alertValues(learnListEl);
+// 2 ////чтобы не дублировать код делаем функцию
+function lastNameLog() {
+    var lastNameId = "last-name";
+    var lastNameEl = document.getElementById(lastNameId);
+    console.log(lastNameEl.value);
+}
+function myOldLog() {
+    var myOldId = "my-old";
+    var myOldEl = document.getElementById(myOldId);
+    console.log(myOldEl.value);
+}
+lastNameLog();//вызываем функции
+lastNameLog();
 
-var avatarId = "avatar";
-var avatarEl = document.getElementById(avatarId);
-alertValues(avatarEl);
+myOldLog();
+myOldLog();
+
+
+// 3 ////обьединяем две функции в одну и выносим id внаружу
+function logValue(id) {
+    var el = document.getElementById(id);
+    console.log(el.value);
+}
+var lastNameId = "last-name";
+var myOldId = "my-old";
+
+logValue (lastNameId);
+logValue (lastNameId);
+
+logValue (myOldId);
+logValue (myOldId);
+
+
+// 3 ////мы хотим получить значение, а потом самим решать что с ним делать (возвращаем функцию)
+function getValue(id) {
+    var el = document.getElementById(id);
+    return el.value;
+}
+var lastNameId = "last-name";
+var myOldId = "my-old";
+
+var value = getValue (lastNameId);
+var value1 = getValue (myOldId);
+
+console.log(value);
+console.log(value1);
+
+
+
